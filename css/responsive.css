@@ -1,0 +1,34 @@
+/* 320px device  */
+@media (max-width: 320px) {
+  .menubar .navbar-brand img {
+    width: 50px;
+  }
+
+  .menubar .navbar-brand span {
+    display: none;
+  }
+
+  .menubar .navbar-nav .nav-item .nav-link {
+    padding: 10px 15px;
+  }
+}
+
+/* 992px device */
+@media (min-width: 768.1px) and (max-width: 992px) {
+  .menubar a span {
+    display: none;
+  }
+
+  .menubar .navbar-nav .nav-item .nav-link {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+/* 1200px device */
+@media (min-width: 992.1px) and (max-width: 1200px) {
+  .menubar .navbar-nav .nav-item .nav-link {
+    padding: 5px;
+    font-size: 14px;
+  }
+}

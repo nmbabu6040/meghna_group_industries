@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+ol,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+span {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+small,
+div,
+section,
+header,
+nav,
+footer,
+aside,
+table,
+th,
+tr,
+td,
+tbody,
+thead,
+tfoot,
+form {
+  padding: 0;
+  margin: 0;
+}
+button {
+  border: none;
+  background: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  /* color: #ffffffbb; */
+}
+
+/* header start  */
+
+.menubar {
+  position: fixed;
+  background: #ffffffbb;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.menubar.active {
+  background: #fff;
+}
+.menubar .navbar-brand span {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+  font-style: italic;
+  transition: all linear 0.4s;
+}
+
+.menubar .navbar-brand span:hover {
+  color: #137ec4;
+}
+
+.menubar .navbar-nav .nav-item .nav-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  margin-left: 5px;
+  transition: all linear 0.4s;
+}
+
+.menubar .navbar-nav .nav-item .nav-link:hover {
+  background: #137ec4;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.menubar .dropdown-menu {
+  padding: 0;
+  background: #137ec4;
+  border-radius: 0;
+}
+
+.menubar .dropdown-menu .dropdown-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: all linear 0.4s;
+  border-bottom: 1px solid #fff;
+}
+
+.menubar .dropdown-menu .dropdown-item:hover {
+  background: #fff;
+  color: #137ec4;
+}
+
+.search-input {
+  position: absolute;
+  right: 20px; /* button এর পাশে বসবে */
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  width: 180px;
+  opacity: 0;
+  padding: 6px 12px;
+  border: none;
+  color: #fff;
+  transition: all 0.35s ease;
+  z-index: 9999;
+}
+
+.search-input.open {
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1);
+  background: #137ec4;
+}
+
+/* bannerPart start  */
+.bannerPart .swiper-slide img {
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper-slide {
+  position: relative;
+}
+.bannerPart {
+  position: relative;
+}
+.bannerShaper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 333;
+}
+
+.bannerShape {
+  width: 100%;
+  height: 100%;
+}
+.bannerPart .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background: #0000007c;
+}
+.bannerPart .swiper-button-next .swiper-navigation-icon,
+.bannerPart .swiper-button-prev .swiper-navigation-icon {
+  display: none !important;
+}
+.bannerPart .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background: #0000007c;
+  color: #fff;
+}
+
+.bannerPart .swipper-text {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-40%, -10%);
+}
+
+.bannerPart .swipper-text h5 {
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 0px 0px 5px #000;
+  font-weight: 600;
+}
+/* flowPart start  */
+.flowPart {
+  padding: 60px 0px;
+  background: #e6e7e8;
+}
+
+.flowHead h3 {
+  color: #137ec4;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.flowHead p {
+  color: #137ec4;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+
+.counterItem {
+  transition: all linear 0.4s;
+}
+
+.counterItem span {
+  color: #137ec4;
+  font-size: 50px;
+}
+
+.counterItem h5 {
+  color: #137ec4;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.counterItem h4 {
+  color: #137ec4;
+  font-size: 18px;
+}
+
+.counterCont h4 span {
+  font-size: 18px;
+}
+.counterCont {
+  transition: all linear 0.4s;
+}
+.counterItem:hover .counterCont {
+  transform: translateY(5px);
+}
+/* verticlePart start  */
+.verticlePart {
+  padding: 60px 0px;
+  background: #e6e7e8;
+}
+
+.verticlaHead h4 {
+  color: #137ec4;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.verticlaHead h5 {
+  color: #137ec4;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+
+/* Main Layout Container */
+.bv-slider-master {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 450px;
+  gap: 35px;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Main Slider fix */
+.mainSlider {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+/* Thumbnail Slider fix */
+.thumbSlider {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+.mainSlider .swiper-slide img,
+.thumbSlider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Thumbnail Slides height calculation */
+.thumbSlider .swiper-slide {
+  height: calc(
+    (450px - 20px) / 3
+  ) !important; /* Slider height / slidesPerView */
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.thumbSlider .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 3px solid #ed1c24;
+}
+
+.thumbSlider .swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbSlider .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background: #0000007c;
+  color: #fff;
+}
+.thumbSlider .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background: #0000007c;
+  color: #fff;
+}
+
+/* chairmanPart start  */
+.chairmanPart {
+  padding: 60px 0px;
+  background: #e6e7e8;
+  position: relative;
+}
+.economicHead h3,
+.chairmanHead h3 {
+  color: #137ec4;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.economicHead h5,
+.chairmanHead h5 {
+  color: #137ec4;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+
+.message h6 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #137ec4;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.message p {
+  color: #137ec4;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+.message small {
+  color: #137ec4;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+.economic {
+  padding: 50px 0px 0px;
+}
+
+.shaper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 333;
+}
+.zoneImg {
+  position: relative;
+  transition: all linear 0.4s;
+  overflow: hidden;
+  z-index: 222;
+  border: 1px solid #137ec4;
+}
+
+.zoneImg:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 126, 196, 0.6);
+  transition: all linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zoneImg:hover {
+  transform: scaleX(1.1);
+  z-index: 999;
+}
+.zoneImg:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.des {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.des h4 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all linear 0.4s;
+  font-family: "Inter", sans-serif;
+  opacity: 1;
+  transition: all linear 0.4s;
+  visibility: visible;
+}
+
+.zoneImg:hover .des h4 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hoverImg {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.4s;
+}
+
+.zoneImg:hover .hoverImg {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* yearPart start  */
+.yearPart {
+  background: #e6e7e8;
+  padding: 50px 0px 0px;
+}
+
+.spaper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 333;
+}
+
+.yearHead h4 {
+  color: #137ec4;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+.yearSlider .owl-stage-outer {
+  padding: 30px 0;
+}
+.yearSlider .owl-dots {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.yearSlider .owl-dots .owl-dot {
+  background: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.yearSlider .yearItem {
+  max-height: 400px;
+}
+
+.yearSlider .yearItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yearSlider .owl-dots .owl-dot.active {
+  background: #137ec4;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #000;
+  font-family: "Inter", sans-serif;
+}
+
+.content h4 {
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 5px #000;
+}
+
+/* brandHead start  */
+.brandHead h3 {
+  color: #137ec4;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.brandHead h5 {
+  color: #137ec4;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+.brandItem {
+  transition: all linear 0.4s;
+}
+.brandItem img {
+  transition: all linear 0.4s;
+}
+.brandItem:hover img {
+  transform: scale(1.1);
+}
+
+.spoilPart .shaper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 333;
+}
+
+.spoilPart .carousel-caption a h4 {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+.spoilPart .carousel-caption a p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.spoilPart .carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 30%;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: var(--bs-carousel-caption-color);
+  text-align: center;
+}
+
+.dutyHead h3 {
+  font-size: 36px;
+  color: #137ec4;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+.dutyHead h5 {
+  color: #137ec4;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.dutyImage {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all linear 0.4s;
+}
+
+.dutyImage img {
+  transition: all linear 0.4s;
+}
+
+.dutyItem:hover .dutyImage img {
+  transform: scale(1.1);
+}
+
+.dutyCont h5 a {
+  display: inline-block;
+  color: #137ec4;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  transition: all linear 0.4s;
+}
+
+.dutyBtn a {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #137ec4;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all linear 0.4s;
+}
+.dutyBtn a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* contactPart start  */
+.contactPart {
+  background: url(../images/cbg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0px;
+}
+
+.contaForm h4 {
+  color: #137ec4;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+.contaForm p {
+  color: #137ec4;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.contaForm form input,
+.contaForm form textarea {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #137dc477;
+}
+.contaForm form input::placeholder,
+.contaForm form textarea::placeholder {
+  color: #137ec4;
+}
+
+/* footer start  */
+.footer {
+  padding: 80px 0px 20px;
+  background: #137ec4;
+}
+
+.contactFt h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contactFt p,
+.contactFt p a {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  transition: all linear 0.4s;
+}
+
+.contactFt p a:hover {
+  text-decoration: underline;
+}
+
+.contactFt ul li a {
+  color: #fff;
+}
+
+.links ul li a {
+  padding: 5px 0px;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  transition: all linear 0.4s;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.about a span {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  transition: all linear 0.4s;
+}
+.about a:hover span {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.copyPart p {
+  color: #fff;
+  font-size: 15px;
+}
